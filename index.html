@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <title>Single Page App demo</title>
 
     <link rel="stylesheet" href="static/css/index.css">
@@ -15,19 +15,47 @@
 <body>
     <!-- Paths start with baseurl for use on GH Pages. -->
     <nav class="nav">
-        <a href="/single-page-app-vanilla-js/" 
+        <a href="/single-page-app-vanilla-js/"
             class="nav__link" data-link>
             Home
         </a>
-        <a href="/single-page-app-vanilla-js/posts" 
+        <a href="/single-page-app-vanilla-js/posts"
             class="nav__link" data-link>
             Posts
         </a>
-        <a href="/single-page-app-vanilla-js/settings" 
+        <a href="/single-page-app-vanilla-js/settings"
             class="nav__link" data-link>
             Settings
         </a>
     </nav>
+
+
+
+  <h1>Simple template</h1>
+
+  <template id="custom-paragraph">
+    <style>
+      p {
+        color: white;
+        background-color: #666;
+        padding: 5px;
+      }
+    </style>
+    <p>
+      <slot name="my-text">My default text</slot>
+    </p>
+  </template>
+
+  <my-paragraph>
+    <span slot="my-text">Let's have some different text!</span>
+  </my-paragraph>
+
+  <my-paragraph>
+    <ul slot="my-text">
+      <li>Let's have some different text!</li>
+      <li>In a list!</li>
+    </ul>
+  </my-paragraph>
 
     <div id="app"></div>
 </body>

@@ -1,8 +1,11 @@
-import Home from './views/Home.js';
+import Home from './views/home/Home.js';
 import Posts from './views/Posts.js';
 import PostView from './views/PostView.js';
-import Settings from './views/Settings.js';
+import Settings from './views/settings/Settings.js';
 import { u } from './lib.js';
+import './web-components/popup-info-box-web-component/main.js';
+import './web-components/simple-template/main.js';
+
 
 const pathToRegex = path =>
   new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');

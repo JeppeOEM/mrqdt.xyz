@@ -4,6 +4,7 @@ export default class extends AbstractView {
   constructor(params) {
     super(params);
     this.postID = params.id;
+    console.log(this.postID, "PSSSSSSSSSSSSSSSSSSSS");
     this.setTitle('Viewing Post');
   }
 
